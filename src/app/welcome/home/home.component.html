@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-5 col-sm-12 wrapper1">
+        <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-5 col-sm-12 wrap wrapper1" >
             <div class="wrapper-content">
                 <div class="main-content">
                     <h3>Launching Soon</h3>
@@ -21,8 +21,12 @@
                         when our new website as ready</p>
                 </div>
                 <div class="wrapper-content4">
-                    <input type="text" placeholder="Your email address">
-                    <button>Subscribe</button>
+                    <div class="input-btn">
+                        <input class="input-btn1" type="text" placeholder="Your email address">
+                    </div>
+                    <div class="input-btn">
+                        <button class="input-btn2">Subscribe</button>
+                    </div>
                 </div>
                 <div class="icon-align"><a href="#" target="blank"><i class="fab fa-instagram"></i></a>
                     <a href="#" target="blank"><i class="fab fa-twitter"></i></a>
@@ -34,29 +38,82 @@
                 </div>
             </div>
         </div>
-        <div class="col-xxl-8 col-xl-7 col-lg-7 col-md-7 col-sm-12 wrapper2">
-            <ngb-carousel>
-                <ng-template ngbSlide>
-                    
-                        <img src="/assets/right.jpg"   alt="Random first slide" />
-                   
+        <div class="col-xxl-8 col-xl-7 col-lg-7 col-md-7 col-sm-12 wrap swiper">
+
+            <!-- <div class="swiper"> -->
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: linear-gradient(to bottom, rgba(6,27,65,0) 0%,rgba(6,27,65,0.95) 100%)"><img src="/assets/right.jpg" alt="Nature"  class="bg"></div>
+                    <div class="swiper-slide" style="background-image: linear-gradient(to bottom, rgba(6,27,65,0) 0%,rgba(6,27,65,0.95) 100%)"><img src="/assets/right.jpg" alt="Nature"  class="bg"></div>
+                    <div class="swiper-slide" style="background-image: linear-gradient(to bottom, rgba(6,27,65,0) 0%,rgba(6,27,65,0.95) 100%)" ><img src="/assets/right.jpg" alt="Nature"  class="bg"></div>
+
+                    <!-- <img src="/assets/right.jpg" alt="Nature" class="responsive">
+                    <img src="/assets/right.jpg" alt="Nature" class="responsive">
+                    <img src="/assets/right.jpg" alt="Nature" class="responsive"> -->
+                  <!-- Slides -->
+                  <!-- <div class="swiper-slide" style="background-image: linear-gradient(to bottom, rgba(6,27,65,0) 0%,rgba(6,27,65,0.95) 100%)" ><img src="/assets/right.jpg" alt="Nature" class="responsive"></div> -->
+                  <!-- <div class="bg swiper-slide" style="background-image: linear-gradient(to bottom, rgba(6,27,65,0) 0%,rgba(6,27,65,0.95) 100%)" ><img src="/assets/right.jpg" alt="Nature" class="responsive"></div>
+                  <div class="bg swiper-slide" style="background-image: linear-gradient(to bottom, rgba(6,27,65,0) 0%,rgba(6,27,65,0.95) 100%)" ><img src="/assets/right.jpg" alt="Nature" class="responsive"></div>
+                  <div class="bg swiper-slide" style="background-image: linear-gradient(to bottom, rgba(6,27,65,0) 0%,rgba(6,27,65,0.95) 100%)"></div>
+                  <div class="bg swiper-slide" style="background-image: linear-gradient(to bottom, rgba(6,27,65,0) 0%,rgba(6,27,65,0.95) 100%), url(/assets/right.jpg)" ></div> -->
+                </div>
+                <!-- If we need pagination -->
+                <!-- <div class="swiper-pagination"></div> -->
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+                <!-- If we need scrollbar -->
+                <!-- <div class="swiper-scrollbar"></div> -->
+              <!-- </div> -->
+
+
+           <!-- <ngb-carousel>
+                <ng-template ngbSlide >
+                    <div></div>
+                        <img src="/assets/right.jpg"   alt="Random first slide" class="overlay"/>
                 </ng-template>
                 <ng-template ngbSlide>
-                    
-                        <img src="/assets/right.jpg" alt="Random second slide" />
-                   
+                        <img src="/assets/right.jpg" alt="Random second slide" class="overlay"/>
                 </ng-template>
                 <ng-template ngbSlide>
-                        
-                        <img src="/assets/right.jpg"  alt="Random third slide" />
-                        
+                        <img src="/assets/right.jpg"  alt="Random third slide" class="overlay"/>
                 </ng-template>
-            </ngb-carousel>
-            <div class="overlay"></div>
-        </div>
+            </ngb-carousel> -->
+
+            
+                <div class="count">
+                    <div class="countdown">
+                        <span>00</span> 
+                        <p>DAYS</p>
+                    </div>
+                    <div class="countdown">
+                        <span>00</span>
+                        <p>HOURS</p>
+                    </div>
+                    <div class="countdown">
+                        <span>00</span>
+                        <p>MINUTES</p>
+                    </div>
+                    <div class="countdown">
+                        <span>00</span>
+                        <p>SECONDS</p>
+                    </div>
+                
+            </div>    
+           <div class="contact">
+                <div class="contact1">
+                    <p class="contact2">email: </p>
+                </div>
+                <div class="contact1">
+                    <p class="contact3">yourmaildomain.com</p>
+                </div>
+            </div>   
+            
+        </div>  
     </div>
 </div>
-
 
 <ng-template #content let-modal>
     <div class="modal1">
@@ -83,7 +140,7 @@
                 </div>
                 <textarea id="Messagearea" formControlName="textarea" placeholder="Your Message:" ></textarea><br>
                 <p-toast></p-toast>
-                <button type="button" pButton pRipple (click)="onSubmit()" label="Send Message" class="p-button-success">Send Message</button>
+                <button type="button" pButton pRipple (click)="onSubmit()" label="Send Message" class="btn btn-primary">Send Message</button>
                 <!-- <button type="button" pButton pRipple (click)="onSubmit()" label="Show" class="btn1 p-button-success" [disabled]="!reactiveForm.valid"></button> -->
                 <!-- <button type="button" class="btn1 btn-outline-dark" (click)="onSubmit()" [disabled]="!reactiveForm.valid" >Send Message</button> -->
             </form>

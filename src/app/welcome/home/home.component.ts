@@ -4,7 +4,10 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { TemplateRef } from '@angular/core';
 import { ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { MessageService } from 'primeng/api';
+// import {Swiper} from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
 
+declare var Swiper: any;
 
 @Component({
   selector: 'app-home',
@@ -16,16 +19,58 @@ export class HomeComponent {
 
   constructor(private messageService: MessageService, private fb:FormBuilder, private modalService: NgbModal) { }
     
-  ngOnInit(): void { }
+  
+  ngOnInit(): void {
+    var mySwiper = new Swiper('.swiper', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+    
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    
+      // And if we need scrollbar
+      // scrollbar: {
+      //   el: '.swiper-scrollbar',
+      // },
+      
+    });
+    var swiperTimer = setInterval(function () {
+      mySwiper.slideNext();
+  }, 2000);
 
+//   mySwiper.on('slideChange', function () {
+//     clearInterval(swiperTimer);
+// });
+
+
+// mySwiper.on('transitionEnd', function () {
+//   swiperTimer = setInterval(function () {
+//       mySwiper.slideNext();
+//   }, 1000);
+// });
+   }
+   
+   
 
 closeResult = '';
+
+
 reactiveForm = this.fb.group({
   name: ['', Validators.required],
   email: ['', Validators.required],
   phone: ['', [Validators.required]],
   textarea: ['', Validators.required] 
 });
+
 
 onSubmit(){
   // console.log('hi')
@@ -67,5 +112,4 @@ private getDismissReason(reason: any): string {
           return `with: ${reason}`;
       }
     }
-
 }
