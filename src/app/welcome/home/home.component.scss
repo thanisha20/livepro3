@@ -172,7 +172,7 @@ textarea{
     overflow-y: visible;
    }
  }
-@media only screen and (min-width: 425px) and (max-width: 780px){
+@media only screen and (min-width: 425px) and (max-width: 768px){
     .countdown{
         font-size: 12px;
     }
@@ -181,7 +181,7 @@ textarea{
         width: 35%;
     }
     .wrapper-content4 {
-        width: 70%;
+        width: 30%;
     }
 }
 @media only screen and (min-width: 375px) and (max-width: 430px){
