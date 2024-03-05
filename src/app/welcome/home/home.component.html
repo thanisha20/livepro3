@@ -1,69 +1,58 @@
 <div class="container-fluid">
-    <div class="row wrapper">
-        <div class="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 wrapper1">
+    <div class="row">
+        <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-5 col-sm-12 wrapper1">
             <div class="wrapper-content">
                 <div class="main-content">
-                    <h4>Launching Soon</h4>
+                    <h3>Launching Soon</h3>
                 </div>
                 <div class="wrapper-content1">
                     <div class="wrapper-content2">
                         <a href="#"><i class="fa fa-phone"></i></a>
                         <span>1234567890</span>
-                        <a href="#"><i class="fa fa-envelope-o"></i></a>
+                        <a href="#"><i class="fa fa-envelope"></i></a>
                         <span>contactusgudvil.in</span>
                     </div>
                 </div>
                 <div class="line"></div>
                 <div class="wrapper-content3">
-                    <h5>Our Website is Coming Soon</h5>
+                    <p class="content3-1">Our Website is Coming Soon</p>
                     <button (click)="open(content)" class="btn1">Get an Invite</button>
-                    <p>Sign up now to our newsletter and you will be one of the first know <br>
+                    <p class="content3-2">Sign up now to our newsletter and you will be one of the first know 
                         when our new website as ready</p>
                 </div>
                 <div class="wrapper-content4">
                     <input type="text" placeholder="Your email address">
                     <button>Subscribe</button>
                 </div>
-                <div class="icon-align"><a href="#" target="blank"><i class="fa fa-facebook"></i></a>
-                    <a href="#" target="blank"><i class="fa fa-twitter"></i></a>
-                    <a href="#" target="blank"><i class="fa fa-instagram"></i></a>
-                    <a href="#" target="blank"><i class="fa fa-vk"></i></a>
+                <div class="icon-align"><a href="#" target="blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="blank"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="blank"><i class="fab fa-linkedin"></i></a>
                 </div>
-                <div>
+                <div class="backimage">
                     <img src="/assets/backgroundimage.png" height="100%" width="100%">
                 </div>
             </div>
         </div>
-        <div class="col-12 col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-12 wrapper2">
+        <div class="col-xxl-8 col-xl-7 col-lg-7 col-md-7 col-sm-12 wrapper2">
             <ngb-carousel>
                 <ng-template ngbSlide>
-                    <div class="picsum-img-wrapper">
-                        <img src="/assets/right.jpg" height="100%" width="100%" alt="Random first slide" />
-                    </div>
-                    <div class="carousel-caption">
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </div>
+                    
+                        <img src="/assets/right.jpg"   alt="Random first slide" />
+                   
                 </ng-template>
                 <ng-template ngbSlide>
-                    <div class="picsum-img-wrapper">
-                        <img src="/assets/right.jpg" height="100%" width="100%" alt="Random second slide" />
-                    </div>
-                    <div class="carousel-caption">
-                        <h3>Second slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </div>
+                    
+                        <img src="/assets/right.jpg" alt="Random second slide" />
+                   
                 </ng-template>
                 <ng-template ngbSlide>
-                    <div class="picsum-img-wrapper">
-                        <img src="/assets/right.jpg" height="100%" width="100%" alt="Random third slide" />
-                    </div>
-                    <div class="carousel-caption">
-                        <h3>Third slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </div>
+                        
+                        <img src="/assets/right.jpg"  alt="Random third slide" />
+                        
                 </ng-template>
             </ngb-carousel>
+            <div class="overlay"></div>
         </div>
     </div>
 </div>
@@ -76,7 +65,7 @@
             <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
         </div>
         <div class="modal-body form">
-            <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+            <form [formGroup]="reactiveForm" >
                 <label for="email">Your name*</label>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
@@ -84,7 +73,7 @@
                 </div>
                 <label for="email">Your mail*</label>
                 <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope-o"></i></span>
+                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope"></i></span>
                     <input type="text" class="form-control" formControlName="email" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
                 <label for="email">Phone*</label>
@@ -92,8 +81,11 @@
                     <span class="input-group-text" id="basic-addon1"><i class="fa fa-phone"></i></span>
                     <input type="text" class="form-control" formControlName="phone" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
-                <textarea id="Messagearea" formControlName="textarea" placeholder="Your Message:" rows="4" cols="54"></textarea><br>
-                <button  class="btn1 btn-outline-dark" [disabled]="!reactiveForm.valid">Send Message</button>
+                <textarea id="Messagearea" formControlName="textarea" placeholder="Your Message:" ></textarea><br>
+                <p-toast></p-toast>
+                <button type="button" pButton pRipple (click)="onSubmit()" label="Send Message" class="p-button-success">Send Message</button>
+                <!-- <button type="button" pButton pRipple (click)="onSubmit()" label="Show" class="btn1 p-button-success" [disabled]="!reactiveForm.valid"></button> -->
+                <!-- <button type="button" class="btn1 btn-outline-dark" (click)="onSubmit()" [disabled]="!reactiveForm.valid" >Send Message</button> -->
             </form>
         </div>
     </div>

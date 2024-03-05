@@ -6,6 +6,7 @@ import { WelcomeComponent } from './welcome.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HomeComponent } from './home/home.component';
     ReactiveFormsModule,
     FormsModule,
     NgbCarouselModule,
-    NgbModule
+    NgbModule,
+    ToastModule
   ]
 })
 export class WelcomeModule { }

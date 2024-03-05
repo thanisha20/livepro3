@@ -23,15 +23,27 @@ closeResult = '';
 reactiveForm = this.fb.group({
   name: ['', Validators.required],
   email: ['', Validators.required],
-  phone: ['', [Validators.required, Validators.email]],
+  phone: ['', [Validators.required]],
   textarea: ['', Validators.required] 
 });
 
 onSubmit(){
+  // console.log('hi')
+  // // console.log(this.reactiveForm.value)
+  // console.log(this.reactiveForm.valid)
+  // this.messageService.add({ severity: 'success', summary: 'Toast Message', detail: 'Form submitted successfully!' });
+  // this.reactiveForm.valueChanges.subscribe(() => {
     if (this.reactiveForm.valid) {
         this.messageService.add({ severity: 'success', summary: 'Toast Message', detail: 'Form submitted successfully!' });
         }
+    else {
+      this.messageService.add({
+        severity: 'error',
+        summary: 'Error',
+        detail: 'Form is not valid. Please check the fields.'
+      });
     }
+  }
 
 
 open(content: TemplateRef<any>) {
