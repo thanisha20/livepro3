@@ -27,7 +27,6 @@ background-color: #3270FC;
 }
 .wrapper-content{
     padding: 80px 40px 0px;
-    // background-color: #3270FC;
     color: white;
 }
 .wrapper-content1 i{
@@ -74,17 +73,6 @@ font-size: 13px;
     justify-content: center;
     align-items: center;
 }
-// .wrapper-content4 {
-// // margin: 30px 0px;
-
-
-
-// width: 25%;
-// position: absolute;
-// background-color: #fff;
-// box-shadow: 0px 0px 0px 6px rgba(255, 255, 255, 0.2);
-// border-radius: 5px; 
-// }
 
 .wrapper-content4 {
     background-color: #fff;
@@ -101,21 +89,8 @@ font-size: 13px;
     border: none;
     border-radius: 5px;
     padding: 6px 8px; 
-    // width: 295px;
 }
 
-   
-
-
-
-// .input-btn input{
-//     position: absolute;
-//     // float: left;
-//     border: none;
-//     border-radius: 5px;
-//     padding: 6px 8px;
-//     // background-color:antiquewhite;
-// }
 
 .wrapper-content4 button{
     position: relative;
@@ -197,251 +172,53 @@ textarea{
     overflow-y: visible;
    }
  }
+@media only screen and (min-width: 425px) and (max-width: 780px){
+    .countdown{
+        font-size: 12px;
+    }
+    .contact{
+        font-size: 12px;
+        width: 35%;
+    }
+    .wrapper-content4 {
+        width: 70%;
+    }
+}
+@media only screen and (min-width: 375px) and (max-width: 430px){
+    .countdown{
+        font-size: 10px;
+    }
+    .contact{
+        font-size: 10px;
+        width: 30%;
+    }
+    .wrapper-content4 {
+        width: 70%;
+    }
+}
+@media only screen and (min-width:320px) and (max-width: 380px){
+    .countdown{
+        font-size: 10px;
+    }
+    .contact{
+        font-size: 10px;
+        width: 30%;
+    }
+    .wrapper-content4 {
+        width: 65%;
+    }
+}
+@media only screen and (max-width: 320px){
+    .countdown{
+        font-size: 8px;
+    }
+    .contact{
+        font-size: 8px;
+        width: 30%;
+    }
+    .wrapper-content4 {
+        width: 65%;
+    }
+    }
 
-// @media only screen and (max-width: 350px){
-//     body {
-//                flex-direction: column;
-               
-//     }
-//    .wrap{
-
-//    }
-//    .bg{
-//     background-attachment: scroll;
-//     height: auto;
-//    }
-// }
-// @media only screen and (min-width:1024px) and (max-width: 1440px){
-//     .wrapper-content{
-//         padding: 50px 40px 0px;
-        
-//     }
-//     .wrapper-content2{
-//     margin-top: 2%;
-//     }
-//     .line{
-//         margin-top: 7%;
-//     }
     
-//     .wrapper-content2 span,i{
-//         font-size: 18px;
-//         }
-
-//         .btn1{ 
-//             margin-top: 10%;
-//            font-size: 20px;
-//         }
-//         .content3-1 {
-//             font-size: 20px;
-//             line-height: 32px;
-//             font-weight: 600;
-//         }
-//     .content3-2 {
-//         font-size: 20px;
-//         line-height: 36px;
-//         margin: 10% 0%;
-//     }
-//     .wrapper-content4 {
-//         margin: 20px 0px;
-//         padding: 5px 0px;
-//         width: 350px;
-//         background-color: #fff;
-//         box-shadow: 0px 0px 0px 6px rgba(255, 255, 255, 0.2);
-//         border-radius: 5px; 
-//         }
-
-//         .wrapper-content4 input{
-//             height: 25px;
-//             width: 260px;
-//             }
-//             .wrapper-content4 button{
-//                 color: white;
-//                 border: 1px solid white;
-//                 background-color: #3270FC;
-//                 padding: 5px 6px;
-//             }
- 
-// }
-// @media only screen and (min-width: 780px) and (max-width: 1024px){
-//     .wrapper-content{
-//         padding: 50px 40px 0px;
-        
-//     }
-   
-//     .line{
-//         margin-top: 3%;
-//     }
-    
-//     .wrapper-content2 span,i{
-//         font-size: 13px;
-//         }
-//         .content3-1{
-//             margin-bottom: 5px;;
-//         }
-
-//         .btn1{ 
-//             margin-top: 0px;
-//             margin-bottom: 5px;
-//            font-size: 13px;
-//         }
-//         .content3-1 {
-//             font-size: 16px;
-//         }
-//     .content3-2 {
-//         font-size: 13px;
-//         margin: 0px;
-//         line-height: 24px;
-//     }
-//     .wrapper-content4 {
-//         margin: 20px 0px;
-//         padding: 5px 0px;
-//         width: 330px;
-//         background-color: #fff;
-//         box-shadow: 0px 0px 0px 6px rgba(255, 255, 255, 0.2);
-//         border-radius: 5px; 
-//         }
-
-//         .wrapper-content4 input{
-//             height: 25px;
-//             width: 245px;
-//             }
-//             .wrapper-content4 button{
-//                 color: white;
-//                 border: 1px solid white;
-//                 background-color: #3270FC;
-//                 padding: 5px 6px;
-//             }
-    
-// }
-// @media only screen and (min-width: 425px) and (max-width: 780px){
-    
-    
-//     .wrapper-content{
-//         padding: 50px 25px 0px;
-//     }
-//     .wrapper-content2 span,i{
-//         font-size: 13px;
-//         }
-//     .wrapper-content3{
-//         margin-top: 0%;
-//     }
-//     .btn1{ 
-//         margin-top: 0px;
-//         margin-bottom: 5px;
-//        font-size: 13px;
-//     }
-//     .wrapper-content3 p{
-//         font-size: 13px;
-//         line-height: 25px;
-//     }
-//     .content3-2 {
-//         margin-top: 5%;
-//     }
-    
-   
-//     .wrapper-content4 {
-//         margin-bottom: 5px 0px;
-//         width: 250px;
-//         background-color: #fff;
-//         box-shadow: 0px 0px 0px 6px rgba(255, 255, 255, 0.2);
-//         border-radius: 5px; 
-//         }
-
-//         .wrapper-content4 input{
-//             height: 15px;
-//             width: 170px;
-//             border-radius: 5px;
-//             border: 1px solid white;
-//             }
-//             .wrapper-content4 button{
-//                 color: white;
-//                 border: 1px solid white;
-//                 background-color: #3270FC;
-//                 padding: 3px 4px;
-//             }
-//             .icon-align{
-//                 display: flex;
-//                 margin-top: 30%;
-//             }
-//             .backimage{
-//                 margin-top: 10px;
-//             }
-// }
-// @media only screen and (min-width: 375px) and (max-width: 430px){
-//     .wrapper-content2{
-//         font-size: 18px;
-//     }
-//     .wrapper-content4 {
-//         margin-bottom: 5px 0px;
-//         width: 350px;
-//         background-color: #fff;
-//         box-shadow: 0px 0px 0px 6px rgba(255, 255, 255, 0.2);
-//         border-radius: 5px; 
-//         }
-
-//         .wrapper-content4 input{
-//             height: 20px;
-//             width: 270px;
-//             border-radius: 5px;
-//             border: 1px solid white;
-//             }
-//             .wrapper-content4 button{
-//                 color: white;
-//                 border: 1px solid white;
-//                 background-color: #3270FC;
-//                 padding: 3px 4px;
-//             }
-// }
-// @media only screen and (min-width:320px) and (max-width: 380px){
-//     .wrapper-content{
-//         padding: 25px 25px 0px;
-//     }
-//     .wrapper-content2{
-//         font-size: 16px;
-//     }
-//     .wrapper-content4 {
-//         margin-bottom: 5px 0px;
-//         width: 280px;
-//         background-color: #fff;
-//         box-shadow: 0px 0px 0px 6px rgba(255, 255, 255, 0.2);
-//         border-radius: 5px; 
-//         }
-
-//         .wrapper-content4 input{
-//             height: 30px;
-//             width: 201px;
-//             border-radius: 5px;
-//             border: 1px solid white;
-//             }
-//             .wrapper-content4 button{
-//                 color: white;
-//                 border: 1px solid white;
-//                 background-color: #3270FC;
-//                 padding: 3px 4px;
-//             }
-// }
-// @media only screen and (max-width: 320px){
-
-//     .wrapper-content4 {
-//         margin-bottom: 5px 0px;
-//         width: 240px;
-//         background-color: #fff;
-//         box-shadow: 0px 0px 0px 6px rgba(255, 255, 255, 0.2);
-//         border-radius: 5px; 
-//         }
-
-//         .wrapper-content4 input{
-//             height: 30px;
-//             width: 160px;
-//             border-radius: 5px;
-//             border: 1px solid white;
-//             }
-//             .wrapper-content4 button{
-//                 color: white;
-//                 border: 1px solid white;
-//                 background-color: #3270FC;
-//                 padding: 3px 4px;
-//             }
-
-            
-//         }

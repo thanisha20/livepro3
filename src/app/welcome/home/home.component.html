@@ -21,14 +21,17 @@
                         when our new website as ready</p>
                 </div>
                 <div class="wrapper-content4">
-                    <div class="input-btn">
-                        <input class="input-btn1" type="text" placeholder="Your email address">
-                    </div>
-                    <div class="input-btn">
-                        <button class="input-btn2">Subscribe</button>
-                    </div>
+                    <form>
+                        <div class="input-btn">
+                            <input class="input-btn1" type="text" placeholder="Your email address">
+                        </div>
+                        <div class="input-btn">
+                            <button class="input-btn2">Subscribe</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="icon-align"><a href="#" target="blank"><i class="fab fa-instagram"></i></a>
+                <div class="icon-align">
+                    <a href="#" target="blank"><i class="fab fa-instagram"></i></a>
                     <a href="#" target="blank"><i class="fab fa-twitter"></i></a>
                     <a href="#" target="blank"><i class="fab fa-facebook"></i></a>
                     <a href="#" target="blank"><i class="fab fa-linkedin"></i></a>
@@ -100,8 +103,7 @@
                         <span>00</span>
                         <p>SECONDS</p>
                     </div>
-                
-            </div>    
+                </div>    
            <div class="contact">
                 <div class="contact1">
                     <p class="contact2">email: </p>
@@ -110,7 +112,6 @@
                     <p class="contact3">yourmaildomain.com</p>
                 </div>
             </div>   
-            
         </div>  
     </div>
 </div>
@@ -140,7 +141,7 @@
                 </div>
                 <textarea id="Messagearea" formControlName="textarea" placeholder="Your Message:" ></textarea><br>
                 <p-toast></p-toast>
-                <button type="button" pButton pRipple (click)="onSubmit()" label="Send Message" class="btn btn-primary">Send Message</button>
+                <button type="button" pButton pRipple (click)="onSubmit()" label="Send Message" class="btn btn-primary" [disabled]="!reactiveForm.valid">Send Message</button>
                 <!-- <button type="button" pButton pRipple (click)="onSubmit()" label="Show" class="btn1 p-button-success" [disabled]="!reactiveForm.valid"></button> -->
                 <!-- <button type="button" class="btn1 btn-outline-dark" (click)="onSubmit()" [disabled]="!reactiveForm.valid" >Send Message</button> -->
             </form>
