@@ -70,7 +70,39 @@ reactiveForm = this.fb.group({
   phone: ['', [Validators.required]],
   textarea: ['', Validators.required] 
 });
+isNameInputFocused = false;
+onInputFocus(controlName: string): void {
+  const nameControl = this.reactiveForm.get('name');
+    if (controlName === 'name' && nameControl?.value) {
+      this.isNameInputFocused = true;
+    }
 
+  // if (controlName === 'name') {
+  //   this.isNameInputActive = true;
+  // }
+
+  // const nameControl = this.reactiveForm.get('name');
+  // if (nameControl) {
+  //   nameControl.markAsTouched();
+  // }
+}
+
+onInputBlur(controlName: string): void {
+
+  const nameControl = this.reactiveForm.get('name');
+    if (controlName === 'name' && nameControl?.value) {
+      this.isNameInputFocused = false;
+    }
+
+  // const nameControl = this.reactiveForm.get('name');
+  // if (controlName === 'name' && !this.reactiveForm.get('name').value) {
+  //   this.isNameInputActive = false;
+  // }
+  // const nameControl = this.reactiveForm.get('name');
+  // if (nameControl && !nameControl.value) {
+  //   nameControl.markAsUntouched();
+  // }
+}
 
 onSubmit(){
   // console.log('hi')

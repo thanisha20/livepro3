@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid">   
     <div class="row">
         <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-5 col-sm-12 wrap wrapper1" >
             <div class="wrapper-content">
@@ -64,7 +64,9 @@
                 <!-- <div class="swiper-pagination"></div> -->
               
                 <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
+                <!-- <div class="swiper-button-prev"></div> -->
+                <!-- <div class="previous"> -->
+                    <div class="swiper-button-prev"><i class="fa fa-arrow-left"></i></div>
                 <div class="swiper-button-next"></div>
               
                 <!-- If we need scrollbar -->
@@ -109,7 +111,7 @@
                     <p class="contact2">email: </p>
                 </div>
                 <div class="contact1">
-                    <p class="contact3">yourmaildomain.com</p>
+                    <p class="contact3">yourmail&#64;domain.com</p>
                 </div>
             </div>   
         </div>  
@@ -118,30 +120,45 @@
 
 <ng-template #content let-modal>
     <div class="modal1">
-        <div class="modal-header">
+        <!-- <div class="modal-header"> -->
+            <div class="header">
+            <div class="header-content">
                 Get In Touch
-            <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
-        </div>
+            </div>
+            <div class="close-btn">
+                <span><i class="fa fa-close" (click)="modal.dismiss('Cross click')"></i></span>
+            </div>
+            <!-- <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button> -->
+            </div>
+            
         <div class="modal-body form">
             <form [formGroup]="reactiveForm" >
                 <label for="email">Your name*</label>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
-                    <input type="text" class="form-control" formControlName="name"placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                <div class="input-group mb-3"> 
+                    <span class="input-group-text" id="basic-addon1" [class.active]="isNameInputFocused" ><i class="fa fa-user"></i></span>
+                    <!-- [class.active]="{'active': reactiveForm.get('name')?.touched && reactiveForm.get('name')?.value == ''}" (focus)="onInputFocus()" (blur)="onInputBlur()" -->
+                    <input type="text" class="form-control" formControlName="name" placeholder="" (focus)="onInputFocus('name')" (blur)="onInputBlur('name')">
+                    <!-- [class.active]="{'active':reactiveForm.get('name')?.touched && reactiveForm.get('name')?.value == ''}" (focus)="onInputFocus()" (blur)="onInputBlur()" -->
                 </div>
                 <label for="email">Your mail*</label>
                 <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope"></i></span>
+                    <span class="input-group-text" id="basic-addon1" [class.active]="isNameInputFocused"><i class="fa fa-envelope"></i></span>
                     <input type="text" class="form-control" formControlName="email" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
                 <label for="email">Phone*</label>
                 <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-phone"></i></span>
+                    <span class="input-group-text" id="basic-addon1" [class.active]="isNameInputFocused" ><i class="fa fa-phone"></i></span>
                     <input type="text" class="form-control" formControlName="phone" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
-                <textarea id="Messagearea" formControlName="textarea" placeholder="Your Message:" ></textarea><br>
+                <label></label>
+                <div class="input-group mb-3">
+                    <span class="textarea input-group-text" id="basic-addon1">
+                <textarea id="Messagearea" formControlName="textarea" placeholder="Your Message:" rows="4"></textarea><br></span>
+                </div>
+                
                 <p-toast></p-toast>
-                <button type="button" pButton pRipple (click)="onSubmit()" label="Send Message" class="btn btn-primary" [disabled]="!reactiveForm.valid">Send Message</button>
+                <button type="button" pButton pRipple (click)="onSubmit()" label="Send Message" class="btn btn-primary" [disabled]="!reactiveForm.valid">Send</button>
+        
                 <!-- <button type="button" pButton pRipple (click)="onSubmit()" label="Show" class="btn1 p-button-success" [disabled]="!reactiveForm.valid"></button> -->
                 <!-- <button type="button" class="btn1 btn-outline-dark" (click)="onSubmit()" [disabled]="!reactiveForm.valid" >Send Message</button> -->
             </form>
