@@ -1,16 +1,16 @@
 <div class="container-fluid">   
     <div class="row">
-        <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-5 col-sm-12 wrap wrapper1" >
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-5 col-sm-12 wrapper1" >
             <div class="wrapper-content">
-                <div class="main-content">
+                <!-- <div class="main-content"> -->
                     <h3>Launching Soon</h3>
-                </div>
+                <!-- </div> -->
                 <div class="wrapper-content1">
                     <div class="wrapper-content2">
-                        <a href="#"><i class="fa fa-phone"></i></a>
+                        <a href="#"><i class="fas fa-phone-alt"></i></a>
                         <span>1234567890</span>
-                        <a href="#"><i class="fa fa-envelope"></i></a>
-                        <span>contactusgudvil.in</span>
+                        <a href="#"><i class="far fa-envelope"></i></a>
+                        <span>contactus&#64;gudvil.in</span>
                     </div>
                 </div>
                 <div class="line"></div>
@@ -23,7 +23,7 @@
                 <div class="wrapper-content4">
                     <form>
                         <div class="input-btn">
-                            <input class="input-btn1" type="text" placeholder="Your email address">
+                            <input class="email-address" type="text" placeholder="Your email address">
                         </div>
                         <div class="input-btn">
                             <button class="input-btn2">Subscribe</button>
@@ -41,82 +41,78 @@
                 </div>
             </div>
         </div>
-        <div class="col-xxl-8 col-xl-7 col-lg-7 col-md-7 col-sm-12 wrap swiper">
-
+        <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-7 col-sm-12 swiper">
+            
             <!-- <div class="swiper"> -->
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="background-image: linear-gradient(to bottom, rgba(6,27,65,0) 0%,rgba(6,27,65,0.95) 100%)"><img src="/assets/right.jpg" alt="Nature"  class="bg"></div>
-                    <div class="swiper-slide" style="background-image: linear-gradient(to bottom, rgba(6,27,65,0) 0%,rgba(6,27,65,0.95) 100%)"><img src="/assets/right.jpg" alt="Nature"  class="bg"></div>
-                    <div class="swiper-slide" style="background-image: linear-gradient(to bottom, rgba(6,27,65,0) 0%,rgba(6,27,65,0.95) 100%)" ><img src="/assets/right.jpg" alt="Nature"  class="bg"></div>
-
-                    <!-- <img src="/assets/right.jpg" alt="Nature" class="responsive">
-                    <img src="/assets/right.jpg" alt="Nature" class="responsive">
-                    <img src="/assets/right.jpg" alt="Nature" class="responsive"> -->
-                  <!-- Slides -->
-                  <!-- <div class="swiper-slide" style="background-image: linear-gradient(to bottom, rgba(6,27,65,0) 0%,rgba(6,27,65,0.95) 100%)" ><img src="/assets/right.jpg" alt="Nature" class="responsive"></div> -->
-                  <!-- <div class="bg swiper-slide" style="background-image: linear-gradient(to bottom, rgba(6,27,65,0) 0%,rgba(6,27,65,0.95) 100%)" ><img src="/assets/right.jpg" alt="Nature" class="responsive"></div>
-                  <div class="bg swiper-slide" style="background-image: linear-gradient(to bottom, rgba(6,27,65,0) 0%,rgba(6,27,65,0.95) 100%)" ><img src="/assets/right.jpg" alt="Nature" class="responsive"></div>
-                  <div class="bg swiper-slide" style="background-image: linear-gradient(to bottom, rgba(6,27,65,0) 0%,rgba(6,27,65,0.95) 100%)"></div>
-                  <div class="bg swiper-slide" style="background-image: linear-gradient(to bottom, rgba(6,27,65,0) 0%,rgba(6,27,65,0.95) 100%), url(/assets/right.jpg)" ></div> -->
+                    
+                    <div class="bg swiper-slide"></div>
+                    <div class="bg swiper-slide"></div>
+                    <div class="bg swiper-slide"></div>
+                    <!-- <div class="bg swiper-slide" style="background-image: linear-gradient(to bottom, rgba(6,27,65,0) 0%,rgba(6,27,65,0.95) 100%), url(/assets/right.jpg)"></div>
+                    
+                    <div class="bg swiper-slide" style="background-image: linear-gradient(to bottom, rgba(6,27,65,0) 0%,rgba(6,27,65,0.95) 100%), url(/assets/right.jpg)"></div>
+                    <div class="bg swiper-slide" style="background-image: linear-gradient(to bottom, rgba(6,27,65,0) 0%,rgba(6,27,65,0.95) 100%), url(/assets/right.jpg)"></div> -->
                 </div>
-                <!-- If we need pagination -->
-                <!-- <div class="swiper-pagination"></div> -->
               
-                <!-- If we need navigation buttons -->
-                <!-- <div class="swiper-button-prev"></div> -->
-                <!-- <div class="previous"> -->
-                    <div class="swiper-button-prev"><i class="fa fa-arrow-left"></i></div>
-                <div class="swiper-button-next"></div>
-              
+                <!-- If we need navigation buttons swiper-button-prev-->
+                <div class="swiper-button-prev navigatorBtnLeft next-el">
+                    <div class="arrow-right">
+                        <i class="fa fa-arrow-left"></i>
+                    </div>
+                </div>
+                <!-- <div class="swiper-button-prev swiper-pagination-bullet navigatorBtnLeft next-el"><i class="fa fa-arrow-left"></i></div> -->
+                <!-- <div class="previous">  <i class="fa fa-phone"></i>-->
+                <!-- <div class="swiper-button-prev"></div>-->
+                <div class="swiper-button-next">
+                    <div class="arrow-left"><i class="fa fa-arrow-right"></i>
+                    </div> 
+                </div>
                 <!-- If we need scrollbar -->
                 <!-- <div class="swiper-scrollbar"></div> -->
               <!-- </div> -->
-
-
-           <!-- <ngb-carousel>
-                <ng-template ngbSlide >
-                    <div></div>
-                        <img src="/assets/right.jpg"   alt="Random first slide" class="overlay"/>
-                </ng-template>
-                <ng-template ngbSlide>
-                        <img src="/assets/right.jpg" alt="Random second slide" class="overlay"/>
-                </ng-template>
-                <ng-template ngbSlide>
-                        <img src="/assets/right.jpg"  alt="Random third slide" class="overlay"/>
-                </ng-template>
-            </ngb-carousel> -->
-
+                <div class="line-transition">
+                    <div class="line">
+                        <div class="straight-line"></div>
+                    </div>
+                </div>
             
-                <div class="count">
-                    <div class="countdown">
-                        <span>00</span> 
-                        <p>DAYS</p>
-                    </div>
-                    <div class="countdown">
-                        <span>00</span>
-                        <p>HOURS</p>
-                    </div>
-                    <div class="countdown">
-                        <span>00</span>
-                        <p>MINUTES</p>
-                    </div>
-                    <div class="countdown">
-                        <span>00</span>
-                        <p>SECONDS</p>
-                    </div>
-                </div>    
-           <div class="contact">
-                <div class="contact1">
-                    <p class="contact2">email: </p>
+            <div class="count">
+                <div class="countdown">
+                    <span>00</span> 
+                    <p>DAYS</p>
                 </div>
-                <div class="contact1">
-                    <p class="contact3">yourmail&#64;domain.com</p>
+                <div class="countdown">
+                    <span>00</span>
+                    <p>HOURS</p>
                 </div>
-            </div>   
+                <div class="countdown">
+                   <span>00</span>
+                    <p>MINUTES</p>
+                </div>
+                <div class="countdown">
+                    <span>00</span>
+                    <p>SECONDS</p>
+                </div>
+            </div>    
+        
+            <div class="contact-details">
+                <div class="contact_block">
+                    <div class="contact_blocks">
+                        <span class="details"><i class="fas fa-phone-alt"></i></span>
+                        <span class="details">1234567890</span>
+                    </div>
+                    <div class="contact_blocks">
+                        <span class="details"><i class="far fa-envelope"></i></span>
+                        <span class="details">contactus&#64;gudvil.in</span>
+                    </div>
+                </div>
+            </div> 
         </div>  
-    </div>
+    </div>  
 </div>
+
 
 <ng-template #content let-modal>
     <div class="modal1">
@@ -135,32 +131,26 @@
             <form [formGroup]="reactiveForm" >
                 <label for="email">Your name*</label>
                 <div class="input-group mb-3"> 
-                    <span class="input-group-text" id="basic-addon1" [class.active]="isNameInputFocused" ><i class="fa fa-user"></i></span>
-                    <!-- [class.active]="{'active': reactiveForm.get('name')?.touched && reactiveForm.get('name')?.value == ''}" (focus)="onInputFocus()" (blur)="onInputBlur()" -->
-                    <input type="text" class="form-control" formControlName="name" placeholder="" (focus)="onInputFocus('name')" (blur)="onInputBlur('name')">
-                    <!-- [class.active]="{'active':reactiveForm.get('name')?.touched && reactiveForm.get('name')?.value == ''}" (focus)="onInputFocus()" (blur)="onInputBlur()" -->
+                    <span class="input-group-text" id="basic-addon1" ><i class="fa fa-user"></i></span>
+                    <input type="text" class="form-control" formControlName="name" placeholder="*Your Name">
                 </div>
                 <label for="email">Your mail*</label>
                 <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1" [class.active]="isNameInputFocused"><i class="fa fa-envelope"></i></span>
-                    <input type="text" class="form-control" formControlName="email" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                    <span class="input-group-text" id="basic-addon1" ><i class="fa fa-envelope"></i></span>
+                    <input type="text" class="form-control" formControlName="email" placeholder="*Your Email" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
                 <label for="email">Phone*</label>
                 <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1" [class.active]="isNameInputFocused" ><i class="fa fa-phone"></i></span>
-                    <input type="text" class="form-control" formControlName="phone" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                    <span class="input-group-text" id="basic-addon1" ><i class="fa fa-phone-alt"></i></span>
+                    <input type="text" class="form-control" formControlName="phone" placeholder="*Your Phone Number" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
                 <label></label>
                 <div class="input-group mb-3">
                     <span class="textarea input-group-text" id="basic-addon1">
-                <textarea id="Messagearea" formControlName="textarea" placeholder="Your Message:" rows="4"></textarea><br></span>
+                <textarea id="Messagearea" formControlName="textarea" placeholder="*Your Message:" rows="4"></textarea><br></span>
                 </div>
-                
                 <p-toast></p-toast>
-                <button type="button" pButton pRipple (click)="onSubmit()" label="Send Message" class="btn btn-primary" [disabled]="!reactiveForm.valid">Send</button>
-        
-                <!-- <button type="button" pButton pRipple (click)="onSubmit()" label="Show" class="btn1 p-button-success" [disabled]="!reactiveForm.valid"></button> -->
-                <!-- <button type="button" class="btn1 btn-outline-dark" (click)="onSubmit()" [disabled]="!reactiveForm.valid" >Send Message</button> -->
+                <button type="button" pButton pRipple (click)="onSubmit()" label="Send Message" class="btn btn-primary" [disabled]="!reactiveForm.valid">&#10003; Send Message</button>
             </form>
         </div>
     </div>
