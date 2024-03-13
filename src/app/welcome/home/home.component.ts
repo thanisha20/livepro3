@@ -33,8 +33,8 @@ export class HomeComponent {
     
       // Navigation arrows
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-prev',
+        prevEl: '.swiper-button-next',
       },
     
       // And if we need scrollbar
@@ -47,16 +47,7 @@ export class HomeComponent {
       mySwiper.slideNext();
   }, 2000);
 
-//   mySwiper.on('slideChange', function () {
-//     clearInterval(swiperTimer);
-// });
 
-
-// mySwiper.on('transitionEnd', function () {
-//   swiperTimer = setInterval(function () {
-//       mySwiper.slideNext();
-//   }, 1000);
-// });
    }
    
    
@@ -73,13 +64,8 @@ reactiveForm = this.fb.group({
 
 
 onSubmit(){
-  // console.log('hi')
-  // // console.log(this.reactiveForm.value)
-  // console.log(this.reactiveForm.valid)
-  // this.messageService.add({ severity: 'success', summary: 'Toast Message', detail: 'Form submitted successfully!' });
-  // this.reactiveForm.valueChanges.subscribe(() => {
     if (this.reactiveForm.valid) {
-        this.messageService.add({ severity: 'success', summary: 'Toast Message', detail: 'Form submitted successfully!' });
+        this.messageService.add({ severity: 'success', summary: 'Submitted Successfully', detail: 'We Will Reach Out To You' });
         }
     else {
       this.messageService.add({
