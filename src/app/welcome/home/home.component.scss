@@ -36,7 +36,7 @@
     top: 30%;
     z-index: -1;
 }
-/*--*/
+/*-fsfs-*/
 .line{
     position: relative;
     height: 3px;
@@ -154,7 +154,8 @@
 
 .email-address{
     border: 1px solid black;
-    padding: 5px 5px; 
+    // background-color: #fff;
+    padding: 0; 
     outline: none;
     width: 100%;
     border-color: transparent;
@@ -347,7 +348,7 @@ textarea{
     width: 30%;
 }
 .icon-align{
-    margin-top: 50%;
+    margin-top: 30%;
 }
 .count{
     width: 90%;
@@ -390,7 +391,7 @@ textarea{
         width: 70%; 
    }
    .icon-align{
-    margin-top: 30%;
+    margin-top: 10%;
 }
 .bg { 
     background-position-x: 25%; 
@@ -414,7 +415,7 @@ textarea{
         width: 70%;
     }
     .icon-align{
-        margin-top: 50%;
+        margin-top: 25%;
     }
     .bg { 
         background-position-x: 25%; 
@@ -438,7 +439,7 @@ textarea{
         width: 65%;
     }
     .icon-align{
-        margin-top: 50%;
+        margin-top: 10%;
     }
     .count{
         width: 90%;
@@ -477,7 +478,7 @@ textarea{
         width: 65%;
     }
     .icon-align{
-        margin-top: 60%;
+        margin-top: 30%;
     }
 
     .count{
